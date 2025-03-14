@@ -25,3 +25,16 @@ ng serve
 ```
 
 Una vez compilado, abre tu navegador y navega a la siguiente ruta `http://localhost:4200/`.
+
+## Framework y librerias del proyecto
+
+* Angular
+* Bootstrap
+* Redux NGRX
+
+## Arquitectura y conceptos utilizados
+
+* Clean Arquitecture
+* DDD (Domain-Driven Design)
+* Design Patterns
+* SOLID
