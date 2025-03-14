@@ -1,0 +1,69 @@
+<div class="container p-5">
+  <h1 class="display-5 text-center">Crear tarea</h1>
+
+  <div class="d-flex justify-content-center">
+    <div class="custom-card">
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="my-3">
+              <label for="title" class="form-label">Titulo</label>
+              <input type="text" class="form-control" id="title" [formControl]="form.controls.title" />
+
+              @if ((form.controls.title.touched || form.controls.title.dirty) && form.controls.title.invalid) {
+                @if (form.controls.title.errors && form.controls.title.errors['required']) {
+                  <div class="invalid-field">
+                    Este campo es requerido.
+                  </div>
+                }
+
+                @if(form.controls.title.errors && form.controls.title.errors['minlength']) {
+                  <div class="invalid-field">
+                    No tiene el tamaño minimo permitido.
+                  </div>
+                }
+
+                @if(form.controls.title.errors && form.controls.title.errors['maxlength']) {
+                  <div class="invalid-field">
+                    Este campo se excede del tamaño maximo permitido.
+                  </div>
+                }
+              }
+            </div>
+          </div>
+  
+          <div class="col-md-12">
+            <div class="my-3">
+              <label for="description" class="form-label">Descripción</label>
+              <textarea class="form-control" id="description" rows="3" [formControl]="form.controls.description"></textarea>
+
+              @if ((form.controls.description.touched || form.controls.description.dirty) && form.controls.description.invalid) {
+                @if (form.controls.description.errors && form.controls.description.errors['required']) {
+                  <div class="invalid-field">
+                    Este campo es requerido.
+                  </div>
+                }
+
+                @if(form.controls.description.errors && form.controls.description.errors['minlength']) {
+                  <div class="invalid-field">
+                    No tiene el tamaño minimo permitido.
+                  </div>
+                }
+
+                @if(form.controls.description.errors && form.controls.description.errors['maxlength']) {
+                  <div class="invalid-field">
+                    Este campo se excede del tamaño maximo permitido.
+                  </div>
+                }
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4 mb-3">
+          <button type="button" class="btn btn-dark" [disabled]="form.invalid" (click)="save()">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
