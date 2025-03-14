@@ -38,3 +38,7 @@ Una vez compilado, abre tu navegador y navega a la siguiente ruta `http://localh
 * DDD (Domain-Driven Design)
 * Design Patterns
 * SOLID
+
+## Ruta de despliegue
+
+El proyecto lo desplegue en Vercel ya que por defecto implementa CI/CD y esta es la ruta de despliegue `https://tasks-test-smart.vercel.app/inicio`.
